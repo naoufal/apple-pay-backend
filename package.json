@@ -1,0 +1,26 @@
+{
+  "name": "apple-pay-backend",
+  "version": "0.1.0",
+  "description": "A simple backend server for testing react-native-apple-pay.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naoufal/apple-pay-backend"
+  },
+  "author": "Naoufal Kadhom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naoufal/apple-pay-backend/issues"
+  },
+  "homepage": "https://github.com/naoufal/apple-pay-backend",
+  "dependencies": {
+    "configo": "0.1.2",
+    "querystring": "0.2.0",
+    "restify": "3.0.3",
+    "stripe": "3.5.0"
+  }
+}
