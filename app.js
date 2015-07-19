@@ -18,14 +18,16 @@ server.post('/stripe', function(req, res, next) {
     });
   }
 
-
   var stripeToken = body.stripeToken;
+  var amount = body.amount;
+  var currency = body.currency;
+  var description = body.description;
 
   var charge = stripe.charges.create({
-    amount: 8888, // amount in cents, again
-    currency: "usd",
+    amount: amount, // amount in cents, again
+    currency: currency,
     source: stripeToken,
-    description: "Apple Pay Example"
+    description: description
   }, function(err, charge) {
     console.log(err, charge)
     if (err && err.type === 'StripeCardError') {
