@@ -29,9 +29,9 @@ server.post('/stripe', function(req, res, next) {
     source: stripeToken,
     description: description
   }, function(err, charge) {
-    console.log(err, charge)
-    if (err && err.type === 'StripeCardError') {
-      return res.json({
+
+    if (err) {
+      return res.status(500).json({
         error: err
       });
     }
